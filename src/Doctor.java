@@ -50,7 +50,7 @@ public class Doctor extends JFrame {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					Patient frame = new Patient();
+					Doctor frame = new Doctor();
 					frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -364,8 +364,6 @@ public class Doctor extends JFrame {
 				String rno = txtRoom.getValue().toString();
 				
 				try {
-					
-					//String query = "insert into patient values('" + pnum + "','" + pname + "','" + phone + "','" + address + "')";
 					
 					pst = con.prepareStatement("insert into doctor(doctorno,name,spec,qualification,chfee,phone,room)values(?,?,?,?,?,?,?)");
 					pst.setString(1, pnum);

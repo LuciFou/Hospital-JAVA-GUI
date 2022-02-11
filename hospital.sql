@@ -22,13 +22,13 @@
 --   dtype varchar(250) not null,
 --   description varchar(250) not null
 -- );
-create table sales
+/*create table sales
 ( id int(11) primary key auto_increment not null,
   date date not null,
   subtotal int(11) not null,
   pay int(11) not null,
   balance int(11) not null
-);
+);*/
 -- create table sale_product
 -- ( id int(11) primary key auto_increment not null,
 --   sales_id int(11) not null,

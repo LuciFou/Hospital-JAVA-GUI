@@ -297,8 +297,8 @@ public class Channel extends JFrame {
                     JOptionPane.showMessageDialog(pnlCreate, "Channel Created");
                     AutoID();
                     lblNum.setText("");
-                    cbxDoctor.setSelectedIndex(-1);
-                    cbxPatient.setSelectedIndex(-1);
+                    cbxDoctor.setSelectedIndex(0);
+                    cbxPatient.setSelectedIndex(0);
                     txtRoom.setValue(0);
                     channelTable();
                     
@@ -357,8 +357,8 @@ public class Channel extends JFrame {
 					JOptionPane.showMessageDialog(pnlDelete, "Channel Deleted");
 					AutoID();
 					lblNum.setText("");
-					cbxDoctor.setSelectedIndex(-1);
-					cbxPatient.setSelectedIndex(-1);
+					cbxDoctor.setSelectedIndex(0);
+					cbxPatient.setSelectedIndex(0);
 					txtRoom.setValue(0);
 					channelTable();
             

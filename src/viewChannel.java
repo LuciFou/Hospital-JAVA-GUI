@@ -473,11 +473,10 @@ public class viewChannel extends JFrame {
 			ex.printStackTrace();
 		}
 	}
-	
+
 	public void channelTable() {
 		try {
-			pst = con.prepareStatement("select channel.channelno,doctor.name,patient.name,channel.roomno,channel.chdate from doctor INNER JOIN channel on channel.doctorname = doctor.doctorno INNER JOIN patient on channel.patientname = patient.patientno where doctor.log_id = ? ");
-			pst.setInt(1, newid);
+			pst = con.prepareStatement("select * from channel");
 			rs = pst.executeQuery();
 			ResultSetMetaData Rsm = rs.getMetaData();
 			int c;
@@ -488,11 +487,11 @@ public class viewChannel extends JFrame {
 			while(rs.next()) {
 				Vector v2 = new Vector();
 				for(int i = 1; i <= c; i++) {
-					v2.add(rs.getString(1));
-					v2.add(rs.getString(2));
-					v2.add(rs.getString(3));
-					v2.add(rs.getString(4));
-					v2.add(rs.getString(5));
+					v2.add(rs.getString("channelno"));
+					v2.add(rs.getString("doctorname"));
+					v2.add(rs.getString("patientname"));
+					v2.add(rs.getString("roomno"));
+					v2.add(rs.getString("chdate"));
 				}
 				
 				df.addRow(v2);
